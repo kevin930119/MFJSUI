@@ -304,7 +304,7 @@ public protocol MFJSUIConfigureDelegate: NSObjectProtocol {
 ## 2、数据绑定（单向绑定）
 ### 2.1 两层KVO监听实现的数据动态绑定
 #### 2.1.1 动态绑定的原理如图所示：
-
+![alt desc](https://github.com/kevin930119/MFJSUI/blob/main/img1.jpg)
 #### 2.1.2 通过链式语法获取数据模型里的数据
 使用的是swift语言的反射机制来获取，代码如下
 ```
