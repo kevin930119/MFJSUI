@@ -1,0 +1,6 @@
+framework module MFJSUI {
+  umbrella header "MFJSUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_MFJSUI_Example {
+  umbrella header "Pods-MFJSUI_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
