@@ -73,3 +73,30 @@ UI控件的API基本系统原生API保持一致，这里不过多赘述
     }
  ]
 ```
+
+event字段为事件名，data为需要传递的数据，触发事件后将会把事件通过冒泡形式传递到最上层View，通过MFJSUIView的代理事件中获取
+```
+public protocol MFJSUIViewDelegate: NSObjectProtocol {
+    /// 内部视图触发事件
+    /// - Parameters:
+    ///   - actionName: 事件名
+    ///   - View: 响应事件的视图
+    ///   - userInfo: 额外信息 如果是手势事件
+    ///   key[MFViewActionKeyGestureRecognizer]里面存储手势对象
+    ///   key[data]里面存储JSON文件事件里面存储的data数据
+    func actionsOccured(event: String, view: UIView, identifier: String?, userInfo: [String:Any]?)
+    
+    /// 内部手势被添加
+    /// 外部可通过该手势做一些处理，例如：不同手势间的交互兼容
+    /// - Parameter gestureRecognizer: 手势
+    /// - Parameter view: 添加视图
+    /// - Parameter identifier: 视图标识
+    func gestureRecognizerDidAdd(gestureRecognizer: UIGestureRecognizer, to view: UIView, identifier: String?)
+}
+```
+
+### 2.3 枚举字段自定义
+View的属性为枚举的，将通过内部自定义枚举字符串的形式进行赋值，自定义的枚举类型列举如下：
+|  枚举   | 值(string)  |
+|  ----  | ----  |
+| ContentMode  | scaleToFill \n asda  |
