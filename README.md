@@ -99,4 +99,4 @@ public protocol MFJSUIViewDelegate: NSObjectProtocol {
 View的属性为枚举的，将通过内部自定义枚举字符串的形式进行赋值，自定义的枚举类型列举如下：
 |  枚举   | 值(string)  |
 |  ----  | ----  |
-| ContentMode  | scaleToFill \n asda  |
+| ContentMode  | scaleToFill<br>asda  |
